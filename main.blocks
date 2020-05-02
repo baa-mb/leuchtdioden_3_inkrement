@@ -1,0 +1,160 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="V^uTpdI`#ulFP:A$i7N3">helligkeit</variable>
+  </variables>
+  <block type="pxt-on-start" x="0" y="0">
+    <statement name="HANDLER">
+      <block type="variables_set">
+        <field name="VAR" id="V^uTpdI`#ulFP:A$i7N3" variabletype="">helligkeit</field>
+        <value name="VALUE">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="device_forever" x="370" y="7">
+    <statement name="HANDLER">
+      <block type="function_call">
+        <mutation name="ein" functionid="yQQr3lmU.-Gj#;n!*2`,">
+          <arg name="num" id="=4l,j)avk3p2c(M{}VJI" type="number"></arg>
+        </mutation>
+        <field name="function_title">Aufruf</field>
+        <field name="function_name">ein</field>
+        <value name="=4l,j)avk3p2c(M{}VJI">
+          <shadow type="math_number" id="7UJwh]CO=v_6RI^q$aPd">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="variables_get">
+            <field name="VAR" id="V^uTpdI`#ulFP:A$i7N3" variabletype="">helligkeit</field>
+          </block>
+        </value>
+        <next>
+          <block type="device_pause">
+            <value name="pause">
+              <shadow type="timePicker">
+                <field name="ms">100</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="variables_change">
+                <field name="VAR" id="V^uTpdI`#ulFP:A$i7N3" variabletype="">helligkeit</field>
+                <value name="VALUE">
+                  <shadow type="math_number">
+                    <field name="NUM">10</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_writevalue">
+                    <value name="name">
+                      <shadow type="text">
+                        <field name="TEXT">x</field>
+                      </shadow>
+                    </value>
+                    <value name="value">
+                      <shadow type="math_number" id="RYvB|=|z3GA8KQu5?Nh}">
+                        <field name="NUM">0</field>
+                      </shadow>
+                      <block type="variables_get">
+                        <field name="VAR" id="V^uTpdI`#ulFP:A$i7N3" variabletype="">helligkeit</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="device_button_event" x="361" y="318">
+    <field name="NAME">Button.A</field>
+    <statement name="HANDLER">
+      <block type="variables_set">
+        <field name="VAR" id="V^uTpdI`#ulFP:A$i7N3" variabletype="">helligkeit</field>
+        <value name="VALUE">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="function_definition" x="8" y="430">
+    <mutation name="ein" functionid="yQQr3lmU.-Gj#;n!*2`,">
+      <arg name="num" id="=4l,j)avk3p2c(M{}VJI" type="number"></arg>
+    </mutation>
+    <field name="function_title">Funktion</field>
+    <field name="function_name">ein</field>
+    <value name="=4l,j)avk3p2c(M{}VJI">
+      <shadow type="argument_reporter_number">
+        <field name="VALUE">num</field>
+      </shadow>
+    </value>
+    <statement name="STACK">
+      <block type="device_set_analog_pin">
+        <field name="name">AnalogPin.P0</field>
+        <value name="value">
+          <shadow type="math_number_minmax" id=".WIpq4mCe=xf$~l$I|Ns">
+            <mutation min="0" max="1023" label="Value"></mutation>
+            <field name="SLIDER">512</field>
+          </shadow>
+          <block type="argument_reporter_number">
+            <field name="VALUE">num</field>
+          </block>
+        </value>
+        <next>
+          <block type="device_set_analog_pin">
+            <field name="name">AnalogPin.P1</field>
+            <value name="value">
+              <shadow type="math_number_minmax" id="AOtY;+hPI!W,mtj*kD|{">
+                <mutation min="0" max="1023" label="Value"></mutation>
+                <field name="SLIDER">512</field>
+              </shadow>
+              <block type="argument_reporter_number">
+                <field name="VALUE">num</field>
+              </block>
+            </value>
+            <next>
+              <block type="device_set_analog_pin">
+                <field name="name">AnalogPin.P2</field>
+                <value name="value">
+                  <shadow type="math_number_minmax" id="@8dk2e}m?466@vqaI2Qq">
+                    <mutation min="0" max="1023" label="Value"></mutation>
+                    <field name="SLIDER">512</field>
+                  </shadow>
+                  <block type="argument_reporter_number">
+                    <field name="VALUE">num</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="function_call" disabled="true" x="550" y="562">
+    <mutation name="ein" functionid="yQQr3lmU.-Gj#;n!*2`,">
+      <arg name="num" id="=4l,j)avk3p2c(M{}VJI" type="number"></arg>
+    </mutation>
+    <field name="function_title">Aufruf</field>
+    <field name="function_name">ein</field>
+    <value name="=4l,j)avk3p2c(M{}VJI">
+      <shadow type="math_number">
+        <field name="NUM">0</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="device_pause" disabled="true">
+        <value name="pause">
+          <shadow type="timePicker">
+            <field name="ms">100</field>
+          </shadow>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>
